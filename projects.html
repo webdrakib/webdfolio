@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Muhammad Rakib | Portfolio</title>
+  <meta name="description" content="Web development, UI/UX design and graphics projects by Muhammad Rakib – Revolution Inventory." />
+  <link rel="icon" href="assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="RI Logo" class="logo-img" />
+        <span class="logo-text">Rakib</span>
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn">☀️</button>
+        <a href="https://drive.google.com/uc?export=download&id=1ioUja7IS2YaoWaqZ0kOTeljUsAlefDZb" class="btn-primary" target="_blank" rel="noopener"><i class="bi bi-download"></i> Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding:5rem 2rem 3rem; text-align:center; max-width:700px; margin:0 auto;">
+      <span class="section-tag">My Work</span>
+      <h1 class="animate-in" style="margin-top:0.75rem;">Featured <span class="gradient-text">Projects</span></h1>
+      <p class="animate-in-delay">A selection of websites, designs and creative work delivered for clients and personal projects.</p>
+    </section>
+
+    <!-- Filter Buttons -->
+    <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom:2.5rem;">
+      <button class="filter-btn btn-primary active" data-filter="all" id="filter-all">All</button>
+      <button class="filter-btn btn-outline" data-filter="web" id="filter-web">Websites</button>
+      <button class="filter-btn btn-outline" data-filter="design" id="filter-design">Graphics</button>
+    </div>
+
+    <section class="section-pad" style="padding-top:0;">
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-img">
+            <img src="assets/images/ActiveBoxwebsite.png" alt="ActiveBox Website" loading="lazy" />
+            <div class="project-card-overlay">
+              <a href="assets/images/ActiveBoxwebsite.png" target="_blank" aria-label="View full image"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>ActiveBox Website</h3>
+            <p>Full responsive business website with SEO optimization and custom PHP back-end.</p>
+            <div class="project-tags"><span class="tag">PHP</span><span class="tag">HTML/CSS</span><span class="tag">SEO</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-img">
+            <img src="assets/images/Switchwebsite.png" alt="Switch Website" loading="lazy" />
+            <div class="project-card-overlay">
+              <a href="assets/images/Switchwebsite.png" target="_blank" aria-label="View full image"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Switch Tech Website</h3>
+            <p>Modern tech company website with dark theme, animations and responsive layout.</p>
+            <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-img">
+            <img src="assets/images/LamBdawebsite.png" alt="Lambda Website" loading="lazy" />
+            <div class="project-card-overlay">
+              <a href="assets/images/LamBdawebsite.png" target="_blank" aria-label="View full image"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Lambda Digital Website</h3>
+            <p>Corporate website with multi-page layout, Laravel back-end and MySQL integration.</p>
+            <div class="project-tags"><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-img">
+            <img src="assets/images/You Desire.png" alt="You Desire Website" loading="lazy" />
+            <div class="project-card-overlay">
+              <a href="assets/images/You Desire.png" target="_blank" aria-label="View full image"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>You Desire E-Commerce</h3>
+            <p>E-commerce platform with product management, cart functionality and payment gateway.</p>
+            <div class="project-tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">E-Commerce</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="design">
+          <div class="project-card-img">
+            <img src="assets/images/Beatles.png" alt="Beatles Poster Design" loading="lazy" />
+            <div class="project-card-overlay">
+              <a href="assets/images/Beatles.png" target="_blank" aria-label="View full image"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Beatles Poster Design</h3>
+            <p>Vintage-inspired graphic poster created in Adobe Photoshop & Illustrator.</p>
+            <div class="project-tags"><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Poster</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="design">
+          <div class="project-card-img">
+            <img src="assets/images/poster1.png" alt="Event Poster" loading="lazy" />
+            <div class="project-card-overlay">
+              <a href="assets/images/poster1.png" target="_blank" aria-label="View full image"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Event Poster Design</h3>
+            <p>Creative event poster with vibrant typography and visual storytelling.</p>
+            <div class="project-tags"><span class="tag">Canva</span><span class="tag">Illustrator</span><span class="tag">Branding</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="design">
+          <div class="project-card-img">
+            <img src="assets/images/banner2.png" alt="Social Media Banner" loading="lazy" />
+            <div class="project-card-overlay">
+              <a href="assets/images/banner2.png" target="_blank" aria-label="View full image"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Social Media Banner</h3>
+            <p>Marketing banner for social media platforms with brand-consistent design.</p>
+            <div class="project-tags"><span class="tag">Canva</span><span class="tag">Social Media</span><span class="tag">Marketing</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="design">
+          <div class="project-card-img">
+            <img src="assets/images/FBbanner.png" alt="Facebook Banner" loading="lazy" />
+            <div class="project-card-overlay">
+              <a href="assets/images/FBbanner.png" target="_blank" aria-label="View full image"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Facebook Business Banner</h3>
+            <p>Professional Facebook cover and ad banner for a business page.</p>
+            <div class="project-tags"><span class="tag">Photoshop</span><span class="tag">Facebook Ads</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="RI" class="footer-logo" />
+        <p>Muhammad Rakib<br/><span>Web Design & Digital Solutions</span></p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a><a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/webdrakib" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        <a href="https://bd.linkedin.com/in/webdrakib" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+        <a href="https://twitter.com/webdrakib" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://web.facebook.com/webdrakib" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.youtube.com/@webdrakib" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Muhammad Rakib · Revolution Inventory – Web Design & Digital Solutions · Dhaka, Bangladesh</p>
+  </footer>
+
+  <script>
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active','btn-primary'); b.classList.add('btn-outline'); });
+        btn.classList.add('active','btn-primary'); btn.classList.remove('btn-outline');
+        const f = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(c => {
+          c.style.display = (f === 'all' || c.dataset.category === f) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
