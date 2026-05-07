@@ -141,18 +141,20 @@ p {
   align-items: center;
   gap: 0.5rem;
   padding: 0.7rem 1.5rem;
-  background: var(--grad-main);
+  background: linear-gradient(135deg, var(--c-primary), var(--c-accent), var(--c-primary));
+  background-size: 200% auto;
   color: #fff;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.95rem;
   border: none;
   cursor: pointer;
-  transition: transform var(--trans), box-shadow var(--trans);
+  transition: transform var(--trans), box-shadow var(--trans), background-position 0.4s ease;
   box-shadow: 0 4px 20px rgba(0, 150, 255, 0.3);
 }
 
 .btn-primary:hover {
+  background-position: right center;
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 150, 255, 0.5);
 }
@@ -307,9 +309,22 @@ p {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(ellipse at 20% 50%, rgba(0, 150, 255, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(0, 220, 255, 0.06) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 20% 50%, rgba(0, 150, 255, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 220, 255, 0.08) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+  background-position: 0 0, 0 0, center center, center center;
   pointer-events: none;
+}
+
+[data-theme="light"] .hero-bg-overlay {
+  background: radial-gradient(ellipse at 20% 50%, rgba(0, 150, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 220, 255, 0.06) 0%, transparent 50%),
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+  background-position: 0 0, 0 0, center center, center center;
 }
 
 .hero-content {
@@ -412,14 +427,19 @@ p {
 
 .hero-img-ring {
   position: absolute;
-  inset: -12px;
+  inset: -15px;
   border-radius: 50%;
-  border: 2px solid transparent;
-  background: var(--grad-main) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-  animation: spin 8s linear infinite;
+  background: conic-gradient(
+    transparent 0deg,
+    var(--c-primary) 90deg,
+    transparent 180deg,
+    var(--c-accent) 270deg,
+    transparent 360deg
+  );
+  animation: spin 6s linear infinite;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.85;
 }
 
 @keyframes spin {
@@ -434,6 +454,9 @@ p {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: var(--shadow-glow);
+  border: 4px solid var(--c-surface);
+  position: relative;
+  z-index: 1;
 }
 
 /* ---- STATS ---- */
@@ -612,13 +635,14 @@ p {
   overflow: hidden;
   border: 1px solid var(--c-border);
   background: var(--c-surface);
-  transition: transform var(--trans), box-shadow var(--trans);
+  transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
   cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 150, 255, 0.15);
+  border-color: rgba(0, 150, 255, 0.3);
 }
 
 .project-card-img {
@@ -758,6 +782,12 @@ p {
 .timeline-item ul li {
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
 }
 
 /* ---- CONTACT PAGE ---- */
@@ -1025,7 +1055,8 @@ p {
   }
 
   .about-grid,
-  .contact-grid {
+  .contact-grid,
+  .timeline-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1039,6 +1070,10 @@ p {
 }
 
 @media (max-width: 600px) {
+  .logo-text {
+    display: none;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
